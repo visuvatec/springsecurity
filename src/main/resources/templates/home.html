@@ -6,13 +6,23 @@
 </head>
 <body>
 	<p th:text="'Welcome Home ' + ${name} + '!'" />
-
+	<h3>springsecurity-03</h3>
 	<ul>
 		<li>Added Spring Thymeleaf Template Engine dependency</li>
 		<li>Created home.html in templates under src/main/resource</li>
 		<li>At html header added the xmlns:th thimeleaf name spacing</li>
 		<li>Modified HomeResource.java controller to redirect on
 			successful authentication to home template</li>
+	</ul>
+	
+	<h3>springsecurity-04</h3>
+	<ul>
+		<li>Removed single spring default application.properties name and password</li>
+		<li>created a new package config</li>
+		<li>Uses configuration class that extends WebSecurityConfigurer and overrides configure method</li>
+		<li>configure authentication with AuthenticationManagerBuilder</li>
+		<li>configure in-memory accounts for authentication</li>
+		<li>Defined a PasswordEncoder Bean</li>
 	</ul>
 </body>
 </html>
