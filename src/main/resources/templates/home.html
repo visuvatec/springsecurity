@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>SpringSecurity:Home Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head th:replace="header :: myHeader">
 </head>
 <body>
 	<p th:text="'Welcome Home ' + ${name} + '!'" />
@@ -24,5 +22,13 @@
 		<li>configure in-memory accounts for authentication</li>
 		<li>Defined a PasswordEncoder Bean</li>
 	</ul>
+	
+	<h3>springsecurity-05</h3>
+	<ul>
+		<li>Had added header and footer Thymeleaf fragments</li>
+	</ul>
+	
+	<div th:insert="footer :: myFooter">
+	</div>
 </body>
 </html>
