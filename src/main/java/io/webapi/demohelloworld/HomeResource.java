@@ -18,5 +18,15 @@ public class HomeResource {
 		
 		return "home";
 	}
+	
+	@GetMapping({"/home", "/"})
+	public String admin(Model model) {
+		
+		model.addAttribute("name", SecurityContextHolder.getContext().getAuthentication().getName());
+		// model.addAttribute("", SecurityContextHolder.getContext().getAuthentication().getPrincipal())
+		System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+		
+		return "admin";
+	}
 
 }

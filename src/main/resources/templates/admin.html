@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: myHeader">
+</head>
+<body>
+	<p th:text="'Welcome Admin ' + ${name} + '!'" />
+	<h3>springsecurity-05</h3>
+
+	<div th:insert="footer :: myFooter">
+	</div>
+</body>
+</html>
